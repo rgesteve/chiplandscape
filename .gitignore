@@ -6,3 +6,17 @@ nohup.out
 
 # Jupyter artifacts
 .ipynb_checkpoints/
+
+# npm build artifacts
+node_modules
+src/chiplandscape/static
+
+# Python build artifacts
+.venv
+__pycache__
+
+# Assorted crap
+dist
+.DS_Store
+
+
