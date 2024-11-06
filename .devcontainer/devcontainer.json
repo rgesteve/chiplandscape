@@ -6,6 +6,12 @@
             "PYTHON_VERSION" : "3.13"
         }
     },
+//  Looks like notebook-minimal already has `npm` via `conda`, but version 6.9, whereas I need 9.2+
+//  (ended up using an updated version from conda-forge)
+//    "features": {
+//        "ghcr.io/devcontainers/features/node:1": {}
+//    },
+    "postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh",
     "forwardPorts": [8888],
     "portsAttributes": {
         "8888": {
