@@ -7,8 +7,8 @@ RUN apt update && apt upgrade -y
 
 USER $NB_USER
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+#COPY requirements.txt .
+#RUN pip install -r requirements.txt
 
 #CMD ["jupyter-lab", "--notebook-dir=/mnt/notebook", "--allow-root", "--no-browser", "--ip=*", "--port=8080", "--NotebookApp.token=''", "--NotebookApp.password=''"]
 #CMD ["jupyter-lab", "--no-browser", "--ip=*", "--port=8888", "--NotebookApp.token=''", "--NotebookApp.password=''"]
