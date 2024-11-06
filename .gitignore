@@ -1,0 +1,8 @@
+# Emacs backup files
+*~
+
+# Nohup output
+nohup.out
+
+# Jupyter artifacts
+.ipynb_checkpoints/
