@@ -5,5 +5,14 @@
         "args" : {
             "PYTHON_VERSION" : "3.13"
         }
-    }
+    },
+    "forwardPorts": [8888],
+    "portsAttributes": {
+        "8888": {
+            "label": "Jupyter",
+            "requireLocalPort": true,
+            "onAutoForward": "ignore"
+        }
+    },
+    "remoteUser": "jovyan"
 }
