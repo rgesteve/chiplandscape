@@ -24,15 +24,17 @@ const treeData = [
 	},
   ]; 
 
-const onChange = (newValue : any) => {
-	console.log(newValue);
-	//setStrValue(newValue);
-  };
-
 const strValue = "Testing value";
 
 const render = createRender(() => {
 	const [value, setValue] = useModelState<number>("value");
+	const [strValue, setStrValue] = useModelState<string>("strValue");
+
+	const onChange = (newValue : any) => {
+		console.log(newValue);
+		setStrValue(newValue);
+	  };
+
 	return (
 		<div className="chiplandscape">
 			<button onClick={() => setValue(value + 1)}>
