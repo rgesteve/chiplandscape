@@ -11,8 +11,13 @@
     "features": {
 //        "ghcr.io/devcontainers/features/node:1": {}
         "ghcr.io/prulloac/devcontainer-features/ollama:1": {
-            "pull" : "phi3.5"
+            "pull" : "phi3.5" // This model won't work with 8Gb
+            //"pull" : "phi3"
         }
+    },
+    // Set minimal host requirements for the container.
+    "hostRequirements": {
+        "memory": "16gb" // Looks like I can only get 8Gb
     },
     "postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh",
     "forwardPorts": [8888],
