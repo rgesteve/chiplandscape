@@ -5,7 +5,8 @@ build-backend = "hatchling.build"
 [project]
 name = "chiplandscape"
 version = "0.0.0"
-dependencies = ["anywidget","itables","pandas"]
+dependencies = ["anywidget","itables","pandas",
+                "langchain", "langchain_core", "langchain_community"]
 readme = "README.md"
 
 # For projects not using `uv`, you can install these development dependencies with:
