@@ -8,9 +8,17 @@
     },
 //  Looks like notebook-minimal already has `npm` via `conda`, but version 6.9, whereas I need 9.2+
 //  (ended up using an updated version from conda-forge)
-//    "features": {
+    "features": {
 //        "ghcr.io/devcontainers/features/node:1": {}
-//    },
+        "ghcr.io/prulloac/devcontainer-features/ollama:1": {
+            "pull" : "phi3.5" // This model won't work with 8Gb
+            //"pull" : "phi3"
+        }
+    },
+    // Set minimal host requirements for the container.
+    "hostRequirements": {
+        "memory": "16gb" // Looks like I can only get 8Gb
+    },
     "postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh",
     "customizations": {
       "settings": {
