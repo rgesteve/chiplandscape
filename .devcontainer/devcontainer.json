@@ -25,7 +25,12 @@
         "files.exclude": {
           "node_modules/**": true,
           ".ipynb_checkpoints/**": true
-        }
+        },
+        "search.exclude": {
+            "node_modules/**": true,
+            ".ipynb_checkpoints/**": true,
+            "nohup.out": true
+         }
       },
     },
     "forwardPorts": [8888],
