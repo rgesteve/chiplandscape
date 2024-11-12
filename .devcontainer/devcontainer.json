@@ -12,6 +12,14 @@
 //        "ghcr.io/devcontainers/features/node:1": {}
 //    },
     "postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh",
+    "customizations": {
+      "settings": {
+        "files.exclude": {
+          "node_modules/**": true,
+          ".ipynb_checkpoints/**": true
+        }
+      },
+    },
     "forwardPorts": [8888],
     "portsAttributes": {
         "8888": {
